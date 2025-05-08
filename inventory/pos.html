@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>POS System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>POS System</h1>
+    
+    <select id="product-select">
+      <option value="">Select Product</option>
+    </select>
+    <input type="number" id="quantity" placeholder="Qty" min="1" />
+    <button onclick="addToCart()">Add to Cart</button>
+
+    <h2>Cart</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th><th>Qty</th><th>Price</th>
+          <th>Subtotal</th>
+          <th>Tax</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="cart-list"></tbody>
+    </table>
+
+    <h3>Total: $<span id="total-count">0.00</span></h3>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <script src="pos.js"></script>
+</body>
+</html>
